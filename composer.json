@@ -1,5 +1,5 @@
 {
-    "name": "my-vendor/my-project",
+    "name": "my-vendor/weekday",
     "type": "project",
     "license": "proprietary",
     "description": "",
@@ -14,12 +14,12 @@
     },
     "autoload": {
         "psr-4": {
-            "MyVendor\\MyProject\\": "src/"
+            "MyVendor\\Weekday\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "MyVendor\\MyProject\\": "tests/"
+            "MyVendor\\Weekday\\": "tests/"
         }
     },
     "scripts": {
@@ -32,7 +32,7 @@
         "setup": [
             "php bin/setup.php"
         ],
-        "compile": "bear.compile 'MyVendor\\MyProject' prod-app ./",
+        "compile": "bear.compile 'MyVendor\\Weekday' prod-app ./",
         "test": [
             "phpunit"
         ],
