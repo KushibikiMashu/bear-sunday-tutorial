@@ -17,3 +17,5 @@
 phpunit.xml
 /docs/api/
 autoload.php
+
+2.0
