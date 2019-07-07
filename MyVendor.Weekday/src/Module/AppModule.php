@@ -1,4 +1,5 @@
 <?php
+
 namespace MyVendor\MyProject\Module;
 
 use BEAR\Package\AbstractAppModule;
@@ -8,6 +9,7 @@ use MyVendor\MyProject\MyLogger;
 use MyVendor\MyProject\MyLoggerInterface;
 use MyVendor\MyProject\Annotation\BenchMark;
 use MyVendor\MyProject\Interceptor\BenchMarker;
+use Ray\CakeDbModule\CakeDbModule;
 
 class AppModule extends AbstractAppModule
 {
@@ -26,5 +28,10 @@ class AppModule extends AbstractAppModule
             $this->matcher->annotatedWith(BenchMark::class),
             [BenchMarker::class]
         );
+        $dbConfig = [
+            'driver'   => 'Cake\Database\Driver\Sqlite',
+            'database' => $appDir . '/var/db/todo.sqlite3',
+        ];
+        $this->install(new CakeDbModule($dbConfig));
     }
 }
