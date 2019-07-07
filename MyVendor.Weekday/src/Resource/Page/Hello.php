@@ -1,5 +1,4 @@
 <?php
-
 namespace MyVendor\MyProject\Resource\Page;
 
 use BEAR\Resource\ResourceObject;
